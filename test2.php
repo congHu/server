@@ -1,0 +1,1 @@
+<?php echo dirname(__FILE__);echo date("Y-m-d H:i:s");?>

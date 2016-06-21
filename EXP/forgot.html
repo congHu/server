@@ -1,0 +1,130 @@
+﻿<html >
+<head>
+    <meta charset="utf-8" />
+    <title>找回密码</title>
+    <link rel="stylesheet" type="text/css" href="login.css">
+    <script src="jquery-2.1.1.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        var step = 0;
+        var email = "";
+        var validCode = "";
+        function nextStep() {
+            switch (step) {
+                case 0:
+                    email = $("#email").val();
+                    var verify = $("#verify").val();
+                    if (email != "") {
+                        if (verify != "") {
+                            $.post("forgot.php", { email: email, valid: verify }, function (data, status) {
+                                var returndata = JSON.parse(data);
+                                if (returndata.error != null) {
+                                    returnError(returndata.error);
+                                } else {
+                                    $("#msg").html("");
+                                    $("#verify").hide();
+                                    $("#email").val("");
+                                    $("#email").attr("placeholder", "请输入邮箱验证码");
+                                    $("#verifyImg").hide();
+                                    step++;
+                                }
+                            });
+                        } else {
+                            $("#msg").html("请输入验证码，点击图片可刷新验证码");
+                        }
+
+                    } else {
+                        $("#msg").html("请输入邮箱地址");
+                    }
+                    break;
+                case 1:
+                    validCode = $("#email").val();
+                    if (validCode != "") {
+                        $.post("forgot1.php", {verify: validCode}, function(data, status){
+                            if (data == "true") {
+                                $("#msg").html("");
+                                $("#verify").show();
+                                $("#email").val("");
+                                $("#verify").val("");
+                                $("#email").attr("placeholder","新密码");
+                                $("#verify").attr("placeholder","确认密码");
+                                $("#email").attr("type","password");
+                                $("#verify").attr("type","password");
+                                step++;
+                            }else{
+                                $("#msg").html("邮箱验证码不正确");
+                            }
+                        });
+                    }
+
+                    break;
+                case 2:
+                    var psw1 = $("#email").val();
+                    var psw2 = $("#verify").val();
+                    if (psw1.length >= 6) {
+                        if (psw1 == psw2) {
+                            $.post("forgot3.php", { eml: email, pswd: psw1, verify: validCode }, function (data, status) {
+                                var returndata = JSON.parse(data);
+                                if (returndata.error != null) {
+                                    $("#msg").html("发生错误" + returndata.error);
+                                } else {
+                                    alert("密码修改成功");
+                                    document.write("");
+                                }
+                            });
+                        } else {
+                            $("#msg").html("两次输入的密码不一致");
+                        }
+                    } else {
+                        $("#msg").html("密码长度需要6位以上");
+                    }
+                    break;
+                default:
+                    break;
+            }
+            
+            
+            return false;
+        }
+
+        function returnError(err) {
+            refreshVerifyImg();
+            switch (err) {
+                case 101:
+                    document.getElementById("msg").innerHTML = "用户不存在，请注册";
+                    break;
+                case 102:
+                    document.getElementById("msg").innerHTML = "验证码不正确，点击图片可刷新";
+                    break;
+                default:
+                    document.getElementById("msg").innerHTML = "发生错误: " + err;
+            }
+        }
+
+        function refreshVerifyImg(){
+            document.getElementById("verifyImg").innerHTML = "<a href='javascript:refreshVerifyImg()'><img src='captcha.php'></a>";
+        }
+    </script>
+</head>
+<body>
+    <div class="main">
+        <div class="logo">
+            <h1>找回密码</h1>
+        </div>
+        <div id="msg"></div>
+        <form class="login" onsubmit="return nextStep()">
+            <div class="row"><input type="text" id="email" placeholder="请输入邮箱地址" /></div>
+            <div class="row"><input type="text" id="verify" placeholder="验证码" /></div>
+            <div class="row" style="overflow: hidden;">
+                <div style="float: right;" id="verifyImg">
+                    <a href="javascript:refreshVerifyImg()"><img src="captcha.php" /></a>
+                </div>
+            </div>
+            <input style="display: none;" type="submit">
+            <div style="overflow: hidden; margin: auto; width: 80px;">
+                <a href="#"><div class="loginBtn" onclick="nextStep()">下一步</div></a>
+            </div>
+        </form>
+    </div>
+    
+</body>
+</html>

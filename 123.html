@@ -1,0 +1,86 @@
+<!Doctype html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<style type="text/css">
+
+			*{
+				margin:0;
+				padding:0;
+			}
+ 			.wrap{
+ 				width:1010px;
+ 				margin:10px auto;
+ 			}
+ 			#tag{ 
+ 				width:130px; 
+ 				overflow:hidden; 
+ 				background:#000; 
+ 				border:1px solid #000; 
+ 				float: left;
+ 			}
+ 			#tag li{
+ 				list-style:none; 
+ 				margin-right:0px; 
+ 				color:white; 
+ 				padding:5px 20px; 
+ 				cursor: pointer;
+ 			}
+ 			#tag .current{ 
+ 				color:#000; 
+ 				background:#ccc; 
+ 			}
+ 			#tagContent{
+ 				float: left;
+ 			}
+ 			#tagContent div{ 
+ 				width:875px; 
+ 				border:1px solid #000; 
+ 				border-top:none;
+ 				height:300px; 
+ 				display:none; 
+ 			}
+ 		</style>
+
+ 		<script type="text/javascript">
+ 			window.onload=function()   //onload 事件句柄，文档装载结束时调用
+			{ 
+  				var tag=document.getElementById("tag").children; //获取Tag下的li，即Tag标签 
+ 				var content=document.getElementById("tagContent").children; //获取Tag标签对应的内容 
+  				content[0].style.display = "block"; //默认显示第一个标签的内容 
+  				var len= tag.length; 
+  				for(var i=0; i<len; i++)   //无论点击谁都能实现当前显示，其余隐藏
+    			{ 
+    				tag[i].index=i; //为何如此？（看下面解释） 
+    				tag[i].onclick = function()     //0级DOM的事件句柄注册
+        			{     
+               			for(var n=0; n<len; n++)
+               			{
+                  			tag[n].className="";
+                 			content[n].style.display="none"; 
+                		}   //首先将全部的div隐藏
+            			tag[this.index].className = "current"; 
+            			content[this.index].style.display = "block"; 
+      				} 
+   				}
+
+			}
+ 		</script>
+	</head>
+
+	<body>
+		
+		<div class="wrap">
+    		<ul id="tag">
+     			<li class="current" >标签一</li>
+      			<li>标签二</li>
+      			<li>标签三</li>
+   			</ul>
+   			<div id="tagContent">
+      			<div> 内容一<br>内容一 </div>
+      			<div> 内容二<br>内容二 </div>
+      			<div> 内容三<br>内容三 </div>
+   			</div>
+		</div>
+	</body>
+</html>

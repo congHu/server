@@ -1,0 +1,130 @@
+一、安装和系统环境变量设置
+1、我使用的PHP为php-5.4.31，不用5.5以上版本的原因是，因为他们都是使用VC11编译的，需要一个DLL，win7及一下都不支持。下载VC9编译的PHP 5.4(5.4.31) for  X86的已编译版本。我的安装目录是D:\Application\php-5.4.31,
+将安装后的路径设置到系统环境变量path中。
+2、perl直接下载安装即可（会自动配置环境变量，不用操心）。
+3、Tomcat用的是7.0.41版本。很多文档要求将server/lib下servlets-cgi改名为servlets-cgi.jar。从6版本以后，好像就没有server目录，内部已经自动支持cgi，只需要进行配置即可。
+Tomcat需要JDK 1.6以上，所以JDK需要先安装好。
+
+2
+二、配置步骤：
+1、到D:\Application\php-5.4.31目录下
+将php.ini-development复制一份同一目录下，命名为php.ini
+<1>设置extension_dir参数：
+extension_dir="D:\Application\php-5.4.31\ext"
+<1>设置cgi.force_redirect参数：
+cgi.force_redirect = 0
+
+3
+2、打开Tomcat的conf下的context.xml文件
+给Context增加属性privileged="true"，修改后的Context元素属性如下所示：
+<Context privileged="true">
+
+4
+3、打开Tomcat的conf下的web.xml文件
+在servlet和servlet-mapping之间增加如下的内容：(注意，注释不能放到配置项里面，否则启动报错)
+<!—Add to support PHP & Perl -->
+<servlet>
+        <servlet-name>cgi</servlet-name>
+        <servlet-class>org.apache.catalina.servlets.CGIServlet</servlet-class>
+        <init-param>
+          <param-name>debug</param-name>
+          <param-value>0</param-value>
+        </init-param>
+        <init-param>
+          <param-name>cgiPathPrefix</param-name>
+ <param-value>WEB-INF/cgi-bin</param-value>
+        </init-param>
+         <load-on-startup>5</load-on-startup>
+</servlet>
+ 
+<servlet>
+<servlet-name>php</servlet-name>
+<servlet-class>org.apache.catalina.servlets.CGIServlet</servlet-class>
+<init-param>
+<param-name>clientInputTimeout</param-name>
+<param-value>200</www.gzlij.com param-value>
+</init-param>
+<init-param>
+<param-name>debug</param-name>
+<param-value>0</param-value>
+</init-param>
+<init-param>
+<param-name>executable</param-name>
+<param-value>D:\Application\php-5.4.31\php-cgi.exe</param-value>
+</init-param>
+ <init-param>
+ <param-name>passShellEnvironment</param-name>
+<param-value>true</param-value>
+</init-param>
+<init-param>
+<param-name>cgiPathPrefix</param-name>
+<param-value>WEB-INF/php-bin</param-value> 
+</init-param>
+<load-on-startup>5</load-on-startup>
+</servlet>
+ 
+<servlet-mapping>
+<servlet-name>php</servlet-name>
+<url-pattern>/php-bin/*</url-pattern>
+</servlet-mapping>
+ 
+<servlet-mapping>
+<servlet-name>cgi</servlet-name>
+<url-pattern>/cgi-bin/*</url-pattern>
+</servlet-mapping>
+备注：
+1、我们配制了两个servlet，分别是php、CGI
+2、在servlet参数中
+<param-name>executable</param-name>
+<param-value>D:\Application\php-5.4.31\php-cgi.exe</param-value>
+指向CGI程序执行器，其实就一可被调用的可执行程序。（这里带全路径，好像不带路径也可以，因为path环境变量里已经配置了）,记住不要用php.exe。
+如果没有配置，缺省就是调用perl执行程序。
+
+5
+3、脚本存放路径
+  <param-name>cgiPathPrefix</param-name>
+  <param-value>WEB-INF/cgi-bin</param-value>
+这里将perl脚本配置的是指向webapps/web-inf/cgi-bin目录下。
+<param-name>cgiPathPrefix</param-name>
+<param-value>WEB-INF/php-bin</param-value> 
+PHP的脚本指向的是webapps/web-inf/php-bin目录下。
+
+6
+4、资源URL路径映射。
+这里如果请求的资源是/php-bin/*则，指向php服务程序，如果是/cgi-bin/*则指向cgi服务程序。
+<servlet-mapping>
+<servlet-name>php</servlet-name>
+<url-pattern>/php-bin/*</url-pattern>
+</servlet-mapping>
+ <servlet-mapping>
+<servlet-name>cgi</servlet-name>
+<url-pattern>/cgi-bin/*</url-pattern>
+</servlet-mapping>
+
+7
+三、测试
+1、分别将如下的test.php和test.cgi测试程序放到webapps\ROOT\WEB-INF\php-bin和webapps\ROOT\WEB-INF\cgi-bin目录下。
+其中test.php内容如下：
+<?php phpinfo();?>
+Test.cgi内容如下：
+# filename: test1.cgi
+print "Content-type: text/html\n\n";
+print "Hello, world!\n"
+
+8
+2、重新启动tomcat。
+浏览器地址栏输入：http://127.0.0.1:8080/php-bin/test.php
+如果显示如下，则说明PHP设置正确。
+Win7系统下如何配置Tomcat支持PHP和Perl
+
+9
+<?php
+echo "hello World!\n\n";
+echo "hello World!\n\n";
+echo "hello World!\n\n";
+?>
+针对上面的程序，如果配置中使用的是PHP.exe，则只能现实两行“hello world！”， 第一行总是莫名其妙地丢失。而且对php-info（）函数，第一行也会丢失。
+（很多文档中都提到这个问题，其实就是因为用错了程序。）
+ 
+浏览器地址栏输入：http://127.0.0.1:8080/cgi-bin/test.cgi
+如果显示“hello world！”，则说明cgi设置正确。
