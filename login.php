@@ -5,7 +5,7 @@ $password=$_POST["password"];
 $verify=$_POST["verify"];
 session_start();
 
-function loginSuccess(){
+function loginSuccess($valid){
 	unset($_SESSION["isRequireCode"]);
 	$userinfo = array();
 	$userinfo["uid"] = $valid["uid"];
@@ -38,7 +38,7 @@ function loginCheck($email, $password){
 			if ($inputpasw[0] != $psw) {
 				loginError(102);
 			}else{
-				loginSuccess();
+				loginSuccess($userExist);
 			}
 		}
 	}
