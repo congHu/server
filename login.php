@@ -51,6 +51,7 @@ function loginCheck($email, $password){
 		}else{
 			loginCheck($email, $password);
 		}
+		
 	}else{
 		loginCheck($email, $password);
 	}

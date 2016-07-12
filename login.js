@@ -86,7 +86,7 @@ var verifyRequire = false;
 				$("#msg").html("密码不正确，忘记密码？");
 				break;
 			case 103:
-				$("#msg").html("密码不正确，忘记密码？");
+				$("#msg").html("验证码不正确");
 				break;
 			default:
 				$("#msg").html("发生错误: " + err);
