@@ -9,8 +9,8 @@ function loginSuccess($valid){
 	unset($_SESSION["isRequireCode"]);
 	$userinfo = array();
 	$userinfo["uid"] = $valid["uid"];
-	$userinfo["localpsw"] = $valid["localpsw"];
 	$userinfo["isActive"] = $valid["isActive"];
+	$userinfo["activecode"] = $valid["activecode"];
 	echo json_encode($userinfo);
 }
 
@@ -27,7 +27,7 @@ function loginCheck($email, $password){
 		exit(1);
 	}else{
 		mysql_select_db("notecloud",$sql);
-		$res = mysql_query("select password,uid,localpsw,isActive from user where email='$email'");
+		$res = mysql_query("select password,uid,activecode,isActive from user where email='$email'");
 		$userExist = mysql_fetch_array($res);
 		if(!$userExist){
 			loginError(101);
