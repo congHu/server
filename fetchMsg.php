@@ -8,7 +8,7 @@
 		exit(1);
 	}else{
 		mysql_select_db("notecloud",$sql);
-		$res = mysql_query("select activecode from user where uid='$uid'");
+		$res = mysql_query("select activecode,friend_comments from user where uid='$uid'");
 		$userExist = mysql_fetch_array($res);
 		if(!$userExist){
 			$err = array('error' => 101);
@@ -23,10 +23,17 @@
 				while ($msg = mysql_fetch_array($msglist)) {
 					$fid = $msg["fromid"];
 					if($msg["send_from"] == "user"){
-						$chatroomname = mysql_query("select uname from user where uid='$fid'");
-						$chatname = mysql_fetch_array($chatroomname);	
-						$msg["chatname"] = $chatname["uname"];
+						$friendComments = json_decode($userExist["friend_comments"],true);
+						if (isset($friendComments[$fid])){
+							$msg["chatname"] = $friendComments[$fid];
+						}else{
+							$chatroomname = mysql_query("select uname from user where uid='$fid'");
+							$chatname = mysql_fetch_array($chatroomname);
+							$msg["chatname"] = $chatname["uname"];
+						}
+
 					}elseif ($msg["send_from"] == "group") {
+						//TODO: 改成了前缀模式
 						$chatroomname = mysql_query("select * from chatroom where cid='$fid'");
 						$chatname = mysql_fetch_array($chatroomname);	
 						$msg["chatname"] = $chatname["roomname"];

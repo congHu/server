@@ -2,20 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b2413007-53dc-4428-ace1-e8051584d46c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/charTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/getFriendComments.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/getUserInfo.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/isFriend.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pinyin/pinyinConvert.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/setAttr.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/activeEmail.php" afterPath="$PROJECT_DIR$/activeEmail.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/getAvatar.php" afterPath="$PROJECT_DIR$/getAvatar.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fetchMsg.php" afterPath="$PROJECT_DIR$/fetchMsg.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/getFriendList.php" afterPath="$PROJECT_DIR$/getFriendList.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jsonAry.php" afterPath="$PROJECT_DIR$/jsonAry.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/register.php" afterPath="$PROJECT_DIR$/register.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/searchFriend.php" afterPath="$PROJECT_DIR$/searchFriend.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sendMsg.php" afterPath="$PROJECT_DIR$/sendMsg.php" />
     </list>
     <ignored path="server.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -52,23 +41,39 @@
       <file leaf-file-name="getFriendList.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/getFriendList.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="96" selection-start-line="10" selection-start-column="96" selection-end-line="10" selection-end-column="96" />
+            <state relative-caret-position="255">
+              <caret line="17" column="41" selection-start-line="17" selection-start-column="41" selection-end-line="17" selection-end-column="41" />
               <folding>
-                <marker date="1469374017000" expanded="true" signature="258:309" ph="select activ... user" />
-                <marker date="1469374017000" expanded="true" signature="932:974" ph="select uname... user" />
+                <marker date="1469417845000" expanded="true" signature="258:325" ph="select activ... user" />
+                <marker date="1469417845000" expanded="true" signature="930:972" ph="select uname... user" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="getFriendComments.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="getFriendComments.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/getFriendComments.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="22" column="5" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
+            <state relative-caret-position="210">
+              <caret line="14" column="31" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
               <folding>
                 <marker date="1469374179000" expanded="true" signature="258:318" ph="select activ... user" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="fetchMsg.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/fetchMsg.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="316">
+              <caret line="31" column="66" selection-start-line="31" selection-start-column="66" selection-end-line="31" selection-end-column="66" />
+              <folding>
+                <marker date="1469418550000" expanded="true" signature="251:311" ph="select activ... user" />
+                <marker date="1469418550000" expanded="true" signature="588:624" ph="select * fro... chat" />
+                <marker date="1469418550000" expanded="true" signature="975:1014" ph="select uname... user" />
+                <marker date="1469418550000" expanded="true" signature="1229:1268" ph="select * fro... chatroom" />
+                <marker date="1469418550000" expanded="true" signature="1581:1609" ph="delete from " />
               </folding>
             </state>
           </provider>
@@ -104,8 +109,8 @@
       <file leaf-file-name="activeEmail.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/activeEmail.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="13" column="41" selection-start-line="13" selection-start-column="41" selection-end-line="13" selection-end-column="41" />
+            <state relative-caret-position="45">
+              <caret line="3" column="48" selection-start-line="3" selection-start-column="48" selection-end-line="3" selection-end-column="48" />
               <folding>
                 <marker date="1469368375000" expanded="true" signature="211:305" ph="select activ... user" />
                 <marker date="1469368375000" expanded="true" signature="538:587" ph="update user " />
@@ -126,18 +131,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="jsonAry.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/jsonAry.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="23" column="6" selection-start-line="23" selection-start-column="6" selection-end-line="23" selection-end-column="6" />
-              <folding>
-                <element signature="e#6#46#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="Git.Settings">
@@ -147,7 +140,6 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/queryTest.php" />
-        <option value="$PROJECT_DIR$/fetchMsg.php" />
         <option value="$PROJECT_DIR$/addFriend.php" />
         <option value="$PROJECT_DIR$/register.php" />
         <option value="$PROJECT_DIR$/charTest.php" />
@@ -162,8 +154,9 @@
         <option value="$PROJECT_DIR$/getUserInfo.php" />
         <option value="$PROJECT_DIR$/searchFriend.php" />
         <option value="$PROJECT_DIR$/jsonAry.php" />
-        <option value="$PROJECT_DIR$/getFriendList.php" />
         <option value="$PROJECT_DIR$/getFriendComments.php" />
+        <option value="$PROJECT_DIR$/getFriendList.php" />
+        <option value="$PROJECT_DIR$/fetchMsg.php" />
       </list>
     </option>
   </component>
@@ -204,6 +197,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
@@ -253,7 +247,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -314,11 +307,12 @@
       <workItem from="1469240053587" duration="6802000" />
       <workItem from="1469344685089" duration="12358000" />
       <workItem from="1469413699749" duration="50000" />
+      <workItem from="1469414982269" duration="1309000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26395000" />
+    <option name="totallyTimeSpent" value="27704000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="824" extended-state="6" />
@@ -348,7 +342,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="1" />
+      <option name="time" value="3" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -358,8 +352,8 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1469374017000" expanded="true" signature="258:309" ph="select activ... user" />
-            <marker date="1469374017000" expanded="true" signature="932:974" ph="select uname... user" />
+            <marker date="1469417845000" expanded="true" signature="258:325" ph="select activ... user" />
+            <marker date="1469417845000" expanded="true" signature="930:972" ph="select uname... user" />
           </folding>
         </state>
       </provider>
@@ -421,7 +415,7 @@
         <state relative-caret-position="210">
           <caret line="14" column="28" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
           <folding>
-            <element signature="e#6#46#0#PHP" expanded="true" />
+            <element signature="e#6#46#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -445,8 +439,8 @@
         <state relative-caret-position="15">
           <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="23" selection-end-column="1" />
           <folding>
-            <marker date="1469374017000" expanded="true" signature="258:309" ph="select activ... user" />
-            <marker date="1469374017000" expanded="true" signature="932:974" ph="select uname... user" />
+            <marker date="1469417845000" expanded="true" signature="258:325" ph="select activ... user" />
+            <marker date="1469417845000" expanded="true" signature="930:972" ph="select uname... user" />
           </folding>
         </state>
       </provider>
@@ -517,8 +511,8 @@
         <state relative-caret-position="15">
           <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="23" selection-end-column="1" />
           <folding>
-            <marker date="1469374017000" expanded="true" signature="258:309" ph="select activ... user" />
-            <marker date="1469374017000" expanded="true" signature="932:974" ph="select uname... user" />
+            <marker date="1469417845000" expanded="true" signature="258:325" ph="select activ... user" />
+            <marker date="1469417845000" expanded="true" signature="930:972" ph="select uname... user" />
           </folding>
         </state>
       </provider>
@@ -612,20 +606,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/fetchMsg.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="555">
-          <caret line="37" column="23" selection-start-line="37" selection-start-column="23" selection-end-line="37" selection-end-column="116" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pinyin/pinyinConvert.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-75">
-          <caret line="23" column="19" selection-start-line="23" selection-start-column="19" selection-end-line="23" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pinyin/ChinesePinyin.class.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
@@ -689,21 +669,40 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/activeEmail.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="41" selection-start-line="13" selection-start-column="41" selection-end-line="13" selection-end-column="41" />
-          <folding>
-            <marker date="1469368375000" expanded="true" signature="211:305" ph="select activ... user" />
-            <marker date="1469368375000" expanded="true" signature="538:587" ph="update user " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/isFriend.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="375">
           <caret line="25" column="18" selection-start-line="25" selection-start-column="18" selection-end-line="25" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/getUserInfo.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="12" selection-start-line="17" selection-start-column="12" selection-end-line="17" selection-end-column="12" />
+          <folding>
+            <marker date="1469368467000" expanded="true" signature="234:318" ph="select uname... user" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/getFriendComments.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="31" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
+          <folding>
+            <marker date="1469374179000" expanded="true" signature="258:318" ph="select activ... user" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jsonAry.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="6" selection-start-line="23" selection-start-column="6" selection-end-line="23" selection-end-column="6" />
+          <folding>
+            <element signature="e#6#46#0#PHP" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -717,22 +716,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/jsonAry.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="23" column="6" selection-start-line="23" selection-start-column="6" selection-end-line="23" selection-end-column="6" />
-          <folding>
-            <element signature="e#6#46#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/addFriend.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
           <caret line="21" column="37" selection-start-line="21" selection-start-column="37" selection-end-line="21" selection-end-column="37" />
           <folding>
             <marker date="1469156810000" expanded="true" signature="280:331" ph="select activ... user" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pinyin/pinyinConvert.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="36" column="61" selection-start-line="36" selection-start-column="61" selection-end-line="36" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/activeEmail.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="48" selection-start-line="3" selection-start-column="48" selection-end-line="3" selection-end-column="48" />
+          <folding>
+            <marker date="1469368375000" expanded="true" signature="211:305" ph="select activ... user" />
+            <marker date="1469368375000" expanded="true" signature="538:587" ph="update user " />
           </folding>
         </state>
       </provider>
@@ -752,31 +760,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/getFriendList.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="96" selection-start-line="10" selection-start-column="96" selection-end-line="10" selection-end-column="96" />
-          <folding>
-            <marker date="1469374017000" expanded="true" signature="258:309" ph="select activ... user" />
-            <marker date="1469374017000" expanded="true" signature="932:974" ph="select uname... user" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/getUserInfo.php">
-      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
-          <caret line="17" column="12" selection-start-line="17" selection-start-column="12" selection-end-line="17" selection-end-column="12" />
+          <caret line="17" column="41" selection-start-line="17" selection-start-column="41" selection-end-line="17" selection-end-column="41" />
           <folding>
-            <marker date="1469368467000" expanded="true" signature="234:318" ph="select uname... user" />
+            <marker date="1469417845000" expanded="true" signature="258:325" ph="select activ... user" />
+            <marker date="1469417845000" expanded="true" signature="930:972" ph="select uname... user" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/getFriendComments.php">
+    <entry file="file://$PROJECT_DIR$/fetchMsg.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="5" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
+        <state relative-caret-position="316">
+          <caret line="31" column="66" selection-start-line="31" selection-start-column="66" selection-end-line="31" selection-end-column="66" />
           <folding>
-            <marker date="1469374179000" expanded="true" signature="258:318" ph="select activ... user" />
+            <marker date="1469418550000" expanded="true" signature="251:311" ph="select activ... user" />
+            <marker date="1469418550000" expanded="true" signature="588:624" ph="select * fro... chat" />
+            <marker date="1469418550000" expanded="true" signature="975:1014" ph="select uname... user" />
+            <marker date="1469418550000" expanded="true" signature="1229:1268" ph="select * fro... chatroom" />
+            <marker date="1469418550000" expanded="true" signature="1581:1609" ph="delete from " />
           </folding>
         </state>
       </provider>

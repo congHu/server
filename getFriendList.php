@@ -8,7 +8,7 @@ if(!$sql) {
     exit(1);
 }else {
     mysql_select_db("notecloud", $sql);
-    $res = mysql_query("select activecode,friend from user where uid='$uid'");//,friend_comments
+    $res = mysql_query("select activecode,friend,friend_comments from user where uid='$uid'");//
     $userExist = mysql_fetch_array($res);
     if (!$userExist) {
         $err = array('error' => 101);
@@ -20,15 +20,15 @@ if(!$sql) {
         } else {
             include "./pinyin/pinyinConvert.php";
             $friendID = json_decode($userExist["friend"]);
-//            $friendComments = json_decode($userExist["friend_comments"],true);
+            $friendComments = json_decode($userExist["friend_comments"],true);
             $friendList = array();
             foreach ($friendID as $friend){
 
                 $query = mysql_query("select uname from user where uid='$friend'");
                 $friendInfo = mysql_fetch_array($query);
-//                if (isset($friendComments[$friend])){
-//                    $friendInfo["uname"] = $friendComments[$friend];
-//                }
+                if (isset($friendComments[$friend])){
+                    $friendInfo["uname"] = $friendComments[$friend];
+                }
                 $friendInfo["pinyin"] = Pinyin($friendInfo["uname"]);
                 $friendInfo["uid"] = $friend;
                 $friendList[] = $friendInfo;
