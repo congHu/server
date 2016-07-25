@@ -16,28 +16,31 @@ if(!$sql) {
         $err = array('error' => 101);
         echo json_encode($err);
     } else {
-        if ($userExist["age_privacy"] != "0"){
-            unset($userExist["birthday"]);
-            unset($userExist["4"]);
-        }
-        if ($userExist["age_privacy"] != "1"){
-            $now = date("Y");
-            $ymd = explode("-" ,$userExist["birthday"]);
-            $birthYear = $ymd[0];
-            $age = $now - $birthYear;
-            $month = date("n");
-            $day = date("j");
-            if ($age != 0){
-                if ($month == $ymd[1]){
-                    if ($day < $ymd[2]){
-                        $age--;
-                    }
-                }elseif ($month < $ymd[1]){
-                    $age--;
-                }
-            }
-            $userExist["age"] = $age;
-        }
+    	if (!empty($userExist["birthday"])) {
+    		if ($userExist["age_privacy"] != "0"){
+            	unset($userExist["birthday"]);
+            	unset($userExist["4"]);
+        	}
+        	if ($userExist["age_privacy"] != "1"){
+            	$now = date("Y");
+            	$ymd = explode("-" ,$userExist["birthday"]);
+            	$birthYear = $ymd[0];
+            	$age = $now - $birthYear;
+            	$month = date("n");
+            	$day = date("j");
+            	if ($age != 0){
+                	if ($month == $ymd[1]){
+                    	if ($day < $ymd[2]){
+                        	$age--;
+                    	}
+                	}elseif ($month < $ymd[1]){
+                    	$age--;
+                	}
+            	}
+            	$userExist["age"] = $age;
+        	}
+    	}
+        
         echo json_encode($userExist);
     }
 }
