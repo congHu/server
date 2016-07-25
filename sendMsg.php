@@ -28,9 +28,27 @@
                     $err = array('error' => 423);
                     echo json_encode($err);
                 }else{
-                    mysql_query("insert into chat$toid (send_from,fromid,type,body,time) values ('user','$uid','$msgtype','$body',now())");
-                    $err = array('success' => 200);
-                    echo json_encode($err);
+
+                    if ($msgtype == "string"){
+                        $newStr = "";
+                        for ($i=0; $i<strlen($body); $i++){
+                            $thisChar = $body[$i];
+                            if ($thisChar == "'"){
+                                $thisChar = "\\'";
+                            }elseif ($thisChar == "\\"){
+                                $thisChar = "\\\\";
+                            }
+                            $newStr = $newStr.$thisChar;
+                        }
+                        mysql_query("insert into chat$toid (send_from,fromid,type,body,time) values ('user','$uid','$msgtype','$newStr',now())");
+                        $err = array('success' => 200);
+                        echo json_encode($err);
+                    }else{
+                        $err = array('error' => 555);
+                        echo json_encode($err);
+                    }
+                    // TODO: 新建"sendGroupMsg.php"
+
                 }
             }
         }

@@ -39,9 +39,11 @@
 			$exist = mysql_fetch_array($res);
 			$uid = $exist["uid"];
 			//消息表
-			$sqlquery = "CREATE TABLE chat$uid (send_from varchar(10) COLLATE utf8mb4_unicode_ci NOT NULL,fromid int(11) NOT NULL,type varchar(10) COLLATE utf8mb4_unicode_ci NOT NULL,body text COLLATE utf8mb4_unicode_ci NOT NULL,time datetime NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci";
+
+			$sqlquery = "CREATE TABLE chat$uid (send_from varchar(10) COLLATE utf8mb4_unicode_ci NOT NULL,fromid int(11) NOT NULL,type varchar(10) COLLATE utf8mb4_unicode_ci NOT NULL,body longtext COLLATE utf8mb4_unicode_ci NOT NULL,time datetime NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci";
+			$sqlquery = addslashes($sqlquery);
 			mysql_query($sqlquery);
-			//默认好运
+			//默认好友
 			mysql_query("update user set friend='[8]' where uid=$uid");
 			//输出
 			$userinfo = array();

@@ -19,11 +19,13 @@
                 $handle=fopen($fileName,"r");//使用打开模式为r
                 $content=fread($handle,filesize($fileName));//读为二进制
                 //$img = array('img' => $content);
-                header("Content-type:image/png");
+                header("Content-type:image/jpg");
                 echo $content;
             }
         }elseif ($type == "group"){
             // TODO: 群聊头像
+            $err = array('error' => 555);
+            echo json_encode($err);
         }
 
 
