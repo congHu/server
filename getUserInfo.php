@@ -17,10 +17,7 @@ if(!$sql) {
         echo json_encode($err);
     } else {
     	if (!empty($userExist["birthday"])) {
-    		if ($userExist["age_privacy"] != "0"){
-            	unset($userExist["birthday"]);
-            	unset($userExist["4"]);
-        	}
+
         	if ($userExist["age_privacy"] != "1"){
             	$now = date("Y");
             	$ymd = explode("-" ,$userExist["birthday"]);
@@ -39,6 +36,10 @@ if(!$sql) {
             	}
             	$userExist["age"] = $age;
         	}
+			if ($userExist["age_privacy"] != "0"){
+				unset($userExist["birthday"]);
+				unset($userExist["4"]);
+			}
     	}
         
         echo json_encode($userExist);
