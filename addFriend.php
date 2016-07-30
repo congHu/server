@@ -1,7 +1,8 @@
 <?php
 $uid = $_POST["uid"];
 $acode = $_POST["acode"];
-$fid = $_POST["fid"];
+$toid = $_POST["toid"];
+
 $sql = mysql_connect("127.0.0.1","root","");
 if(!$sql) {
     $err = array('error' => 775);
@@ -19,7 +20,20 @@ if(!$sql) {
             $err = array('error' => 174);
             echo json_encode($err);
         } else {
-            // TODO: 搜索好友, 发送邀请, 接受邀请
+            $friendlist = json_decode($userExist["friend"]);
+            $friendlist = array_flip($friendlist);
+            if ($friendlist[$toid] != null) {
+                $err = array('error' => 423);
+                echo json_encode($err);
+            } else {
+                $friendlist = array_flip($friendlist);
+                $friendlist[] = $toid;
+                $friendlist = array_values($friendlist);
+                $jsonOut = json_encode($friendlist);
+                mysql_query("update user set friend=$jsonOut where uid=$uid");
+                $err = array('success' => 200);
+                echo json_encode($err);
+            }
         }
     }
 }

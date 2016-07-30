@@ -3,7 +3,7 @@
 	$acode = $_POST["acode"];
     $toid = $_POST["toid"];
 
-    $msgtype = $_POST["msgtype"];
+    $msgtype = "string";
     $body = $_POST["body"];
 	$sql = mysql_connect("127.0.0.1","root","");
 	if(!$sql) {
