@@ -31,6 +31,16 @@ if(!$sql) {
                 $friendlist = array_values($friendlist);
                 $jsonOut = json_encode($friendlist);
                 mysql_query("update user set friend=$jsonOut where uid=$uid");
+
+                // TODO: 同时更新对方好友列表
+                $resF = mysql_query("select friend from user where uid='$toid'");
+                $friendFetch = mysql_fetch_array($resF);
+                $friendList2 = json_decode($friendFetch["friend"]);
+                $friendList2[] = $uid;
+                $friendList2 = array_values($friendList2);
+                $jsonOutFriend = json_encode($friendList2);
+                mysql_query("update user set friend=$jsonOutFriend where uid=$toid");
+                mysql_query("insert into chat$toid (send_from,fromid,type,body,time) values ('user','$uid','string','我们已经成为好友啦，可以愉快地开始聊天啦!',now())");
                 $err = array('success' => 200);
                 echo json_encode($err);
             }

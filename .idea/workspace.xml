@@ -3,10 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="b2413007-53dc-4428-ace1-e8051584d46c" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/addFriend.php" afterPath="$PROJECT_DIR$/addFriend.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jsonAry.php" afterPath="$PROJECT_DIR$/jsonAry.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sendMsg.php" afterPath="$PROJECT_DIR$/sendMsg.php" />
     </list>
     <ignored path="server.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -43,8 +40,8 @@
       <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="22" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
+            <state relative-caret-position="270">
+              <caret line="18" column="17" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -91,14 +88,17 @@
       <file leaf-file-name="addFriend.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/addFriend.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="18" column="49" selection-start-line="18" selection-start-column="49" selection-end-line="18" selection-end-column="49" />
+            <state relative-caret-position="435">
+              <caret line="37" column="67" selection-start-line="37" selection-start-column="67" selection-end-line="37" selection-end-column="67" />
               <folding>
-                <marker date="1469894119000" expanded="true" signature="283:334" ph="select activ... user" />
-                <marker date="1469894119000" expanded="true" signature="1129:1152" ph="update user " />
-                <marker date="1469894119000" expanded="true" signature="1129:1153" ph="update user " />
-                <marker date="1469894119000" expanded="true" signature="1129:1171" ph="update user " />
-                <marker date="1469894119000" expanded="true" signature="1129:1172" ph="update user " />
+                <marker date="1469895709000" expanded="true" signature="283:334" ph="select activ... user" />
+                <marker date="1469895709000" expanded="true" signature="1129:1152" ph="update user " />
+                <marker date="1469895709000" expanded="true" signature="1129:1153" ph="update user " />
+                <marker date="1469895709000" expanded="true" signature="1129:1171" ph="update user " />
+                <marker date="1469895709000" expanded="true" signature="1129:1172" ph="update user " />
+                <marker date="1469895709000" expanded="true" signature="1253:1294" ph="select frien... user" />
+                <marker date="1469895709000" expanded="true" signature="1610:1658" ph="update user " />
+                <marker date="1469895709000" expanded="true" signature="1696:1813" ph="insert into chat${$toid}... " />
               </folding>
             </state>
           </provider>
@@ -117,8 +117,8 @@
       <file leaf-file-name="sendMsg.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sendMsg.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="58">
-              <caret line="18" column="35" selection-start-line="18" selection-start-column="35" selection-end-line="18" selection-end-column="35" />
+            <state relative-caret-position="418">
+              <caret line="42" column="24" selection-start-line="42" selection-start-column="24" selection-end-line="42" selection-end-column="145" />
               <folding />
             </state>
           </provider>
@@ -331,12 +331,12 @@
       <workItem from="1469414982269" duration="1309000" />
       <workItem from="1469715535481" duration="1363000" />
       <workItem from="1469799601173" duration="1644000" />
-      <workItem from="1469889899311" duration="3879000" />
+      <workItem from="1469889899311" duration="5098000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="34590000" />
+    <option name="totallyTimeSpent" value="35809000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="824" extended-state="6" />
@@ -383,11 +383,14 @@
         <state relative-caret-position="315">
           <caret line="21" column="37" selection-start-line="21" selection-start-column="37" selection-end-line="21" selection-end-column="37" />
           <folding>
-            <marker date="1469894119000" expanded="true" signature="283:334" ph="select activ... user" />
-            <marker date="1469894119000" expanded="true" signature="1129:1152" ph="update user " />
-            <marker date="1469894119000" expanded="true" signature="1129:1153" ph="update user " />
-            <marker date="1469894119000" expanded="true" signature="1129:1171" ph="update user " />
-            <marker date="1469894119000" expanded="true" signature="1129:1172" ph="update user " />
+            <marker date="1469895709000" expanded="true" signature="283:334" ph="select activ... user" />
+            <marker date="1469895709000" expanded="true" signature="1129:1152" ph="update user " />
+            <marker date="1469895709000" expanded="true" signature="1129:1153" ph="update user " />
+            <marker date="1469895709000" expanded="true" signature="1129:1171" ph="update user " />
+            <marker date="1469895709000" expanded="true" signature="1129:1172" ph="update user " />
+            <marker date="1469895709000" expanded="true" signature="1253:1294" ph="select frien... user" />
+            <marker date="1469895709000" expanded="true" signature="1610:1658" ph="update user " />
+            <marker date="1469895709000" expanded="true" signature="1696:1813" ph="insert into chat${$toid}... " />
           </folding>
         </state>
       </provider>
@@ -450,11 +453,14 @@
         <state relative-caret-position="315">
           <caret line="21" column="37" selection-start-line="21" selection-start-column="37" selection-end-line="21" selection-end-column="37" />
           <folding>
-            <marker date="1469894119000" expanded="true" signature="283:334" ph="select activ... user" />
-            <marker date="1469894119000" expanded="true" signature="1129:1152" ph="update user " />
-            <marker date="1469894119000" expanded="true" signature="1129:1153" ph="update user " />
-            <marker date="1469894119000" expanded="true" signature="1129:1171" ph="update user " />
-            <marker date="1469894119000" expanded="true" signature="1129:1172" ph="update user " />
+            <marker date="1469895709000" expanded="true" signature="283:334" ph="select activ... user" />
+            <marker date="1469895709000" expanded="true" signature="1129:1152" ph="update user " />
+            <marker date="1469895709000" expanded="true" signature="1129:1153" ph="update user " />
+            <marker date="1469895709000" expanded="true" signature="1129:1171" ph="update user " />
+            <marker date="1469895709000" expanded="true" signature="1129:1172" ph="update user " />
+            <marker date="1469895709000" expanded="true" signature="1253:1294" ph="select frien... user" />
+            <marker date="1469895709000" expanded="true" signature="1610:1658" ph="update user " />
+            <marker date="1469895709000" expanded="true" signature="1696:1813" ph="insert into chat${$toid}... " />
           </folding>
         </state>
       </provider>
@@ -530,11 +536,14 @@
         <state relative-caret-position="315">
           <caret line="21" column="37" selection-start-line="21" selection-start-column="37" selection-end-line="21" selection-end-column="37" />
           <folding>
-            <marker date="1469894119000" expanded="true" signature="283:334" ph="select activ... user" />
-            <marker date="1469894119000" expanded="true" signature="1129:1152" ph="update user " />
-            <marker date="1469894119000" expanded="true" signature="1129:1153" ph="update user " />
-            <marker date="1469894119000" expanded="true" signature="1129:1171" ph="update user " />
-            <marker date="1469894119000" expanded="true" signature="1129:1172" ph="update user " />
+            <marker date="1469895709000" expanded="true" signature="283:334" ph="select activ... user" />
+            <marker date="1469895709000" expanded="true" signature="1129:1152" ph="update user " />
+            <marker date="1469895709000" expanded="true" signature="1129:1153" ph="update user " />
+            <marker date="1469895709000" expanded="true" signature="1129:1171" ph="update user " />
+            <marker date="1469895709000" expanded="true" signature="1129:1172" ph="update user " />
+            <marker date="1469895709000" expanded="true" signature="1253:1294" ph="select frien... user" />
+            <marker date="1469895709000" expanded="true" signature="1610:1658" ph="update user " />
+            <marker date="1469895709000" expanded="true" signature="1696:1813" ph="insert into chat${$toid}... " />
           </folding>
         </state>
       </provider>
@@ -766,31 +775,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="22" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/getBGImg.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
           <caret line="13" column="26" selection-start-line="13" selection-start-column="26" selection-end-line="13" selection-end-column="26" />
           <folding>
             <marker date="1469715845000" expanded="true" signature="285:325" ph="select bg_im... user" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sendFriendReq.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="12" selection-start-line="18" selection-start-column="12" selection-end-line="18" selection-end-column="12" />
-          <folding>
-            <marker date="1469800557000" expanded="true" signature="305:356" ph="select activ... user" />
-            <marker date="1469800557000" expanded="true" signature="1338:1438" ph="insert into chat${$toid}... " />
           </folding>
         </state>
       </provider>
@@ -805,10 +795,29 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="17" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sendFriendReq.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="12" selection-start-line="18" selection-start-column="12" selection-end-line="18" selection-end-column="12" />
+          <folding>
+            <marker date="1469800557000" expanded="true" signature="305:356" ph="select activ... user" />
+            <marker date="1469800557000" expanded="true" signature="1338:1438" ph="insert into chat${$toid}... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/sendMsg.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="58">
-          <caret line="18" column="35" selection-start-line="18" selection-start-column="35" selection-end-line="18" selection-end-column="35" />
+        <state relative-caret-position="418">
+          <caret line="42" column="24" selection-start-line="42" selection-start-column="24" selection-end-line="42" selection-end-column="145" />
           <folding />
         </state>
       </provider>
@@ -823,14 +832,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/addFriend.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="49" selection-start-line="18" selection-start-column="49" selection-end-line="18" selection-end-column="49" />
+        <state relative-caret-position="435">
+          <caret line="37" column="67" selection-start-line="37" selection-start-column="67" selection-end-line="37" selection-end-column="67" />
           <folding>
-            <marker date="1469894119000" expanded="true" signature="283:334" ph="select activ... user" />
-            <marker date="1469894119000" expanded="true" signature="1129:1152" ph="update user " />
-            <marker date="1469894119000" expanded="true" signature="1129:1153" ph="update user " />
-            <marker date="1469894119000" expanded="true" signature="1129:1171" ph="update user " />
-            <marker date="1469894119000" expanded="true" signature="1129:1172" ph="update user " />
+            <marker date="1469895709000" expanded="true" signature="283:334" ph="select activ... user" />
+            <marker date="1469895709000" expanded="true" signature="1129:1152" ph="update user " />
+            <marker date="1469895709000" expanded="true" signature="1129:1153" ph="update user " />
+            <marker date="1469895709000" expanded="true" signature="1129:1171" ph="update user " />
+            <marker date="1469895709000" expanded="true" signature="1129:1172" ph="update user " />
+            <marker date="1469895709000" expanded="true" signature="1253:1294" ph="select frien... user" />
+            <marker date="1469895709000" expanded="true" signature="1610:1658" ph="update user " />
+            <marker date="1469895709000" expanded="true" signature="1696:1813" ph="insert into chat${$toid}... " />
           </folding>
         </state>
       </provider>
