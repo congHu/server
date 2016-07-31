@@ -21,10 +21,10 @@ if(!$sql) {
         } else {
             $friendlist = json_decode($userExist["friend"]);
             $friendlist = array_flip($friendlist);
-            if ($friendlist[$fid] == null){
-                echo "0";
-            }else{
+            if (array_key_exists($fid, $friendlist)){
                 echo "1";
+            }else{
+                echo "0";
             }
         }
     }

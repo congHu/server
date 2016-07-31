@@ -1,11 +1,13 @@
 <?php
-	$jsonStr = "[2,5,7,9,1,12,20,16,14]";
+	$jsonStr = "[8,4]";
 	$jsonAry = json_decode($jsonStr);
 	$jsonAry = array_flip($jsonAry);
-	$jsonAry = array_flip($jsonAry);
-	$jsonAry[] = 99;
-	$jsonAry = array_values($jsonAry);
-	echo json_encode($jsonAry);
+//	echo array_key_exists(8,$jsonAry);
+	echo ($jsonAry[3] == null);
+//	$jsonAry = array_flip($jsonAry);
+//	$jsonAry[] = 99;
+//	$jsonAry = array_values($jsonAry);
+//	echo json_encode($jsonAry);
 //	$newJson = "[";
 //	for ($i=0; $i < count($jsonAry); $i++) {
 //		$newJson = $newJson.$jsonAry[$i];
