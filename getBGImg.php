@@ -1,6 +1,5 @@
 <?php
 $uid = $_GET["uid"];
-$type = $_GET["type"];
 $sql = mysql_connect("127.0.0.1","root","");
 if(!$sql) {
     $err = array('error' => 775);
@@ -16,7 +15,7 @@ if(!$sql) {
             echo json_encode($err);
         } else {
             if (!empty($userExist["bg_img"])){
-                $fileName = "./bg_img/" . $userExist["avatar"];
+                $fileName = "./bg_img/" . $userExist["bg_img"];
                 $handle = fopen($fileName, "r");//使用打开模式为r
                 $content = fread($handle, filesize($fileName));//读为二进制
                 //$img = array('img' => $content);
