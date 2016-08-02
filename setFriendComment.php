@@ -26,10 +26,24 @@ if(!$sql) {
                 $err = array('error' => 423);
                 echo json_encode($err);
             } else {
-                $comments = json_decode($userExist["friend_comments"]);
+                $comments = json_decode($userExist["friend_comments"],true);
                 $comments[$toid] = $comm;
                 $json = json_encode($comments);
-                mysql_query("update user set friend_comments='$json' where uid='$uid'");
+
+                $newStr = "";
+                for ($i=0; $i<strlen($json); $i++){
+                    $thisChar = $json[$i];
+                    if ($thisChar == "'"){
+                        $thisChar = "\\'";
+                    }elseif ($thisChar == "\\"){
+                        $thisChar = "\\\\";
+                    }
+                    $newStr = $newStr.$thisChar;
+                }
+
+                mysql_query("update user set friend_comments='$newStr' where uid='$uid'");
+                $err = array('success' => 200);
+                echo json_encode($err);
 
 
             }

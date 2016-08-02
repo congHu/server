@@ -10,7 +10,7 @@ if(!$sql) {
     exit(1);
 }else {
     mysql_select_db("notecloud", $sql);
-    $res = mysql_query("select activecode,friend from user where uid='$uid'");
+    $res = mysql_query("select activecode,friend,friend_comments from user where uid='$uid'");
     $userExist = mysql_fetch_array($res);
     if (!$userExist) {
         $err = array('error' => 101);
@@ -32,8 +32,26 @@ if(!$sql) {
                 $json = json_encode($friendlist);
                 mysql_query("update user set friend='$json' where uid='$uid'");
 
+                $friendComments = json_decode($userExist["friend_comments"], true);
+                unset($friendComments[$toid]);
+                $friendCommentsJson = json_encode($friendComments);
+
+                $newStr = "";
+                for ($i=0; $i<strlen($friendCommentsJson); $i++){
+                    $thisChar = $friendCommentsJson[$i];
+                    if ($thisChar == "'"){
+                        $thisChar = "\\'";
+                    }elseif ($thisChar == "\\"){
+                        $thisChar = "\\\\";
+                    }
+                    $newStr = $newStr.$thisChar;
+                }
+                mysql_query("update user set friend_comments='$newStr' where uid='$uid'");
+
+
                 $resF = mysql_query("select friend from user where uid='$toid'");
                 $friendFetch = mysql_fetch_array($resF);
+
                 $friendList2 = json_decode($friendFetch["friend"]);
                 $friendList2 = array_flip($friendList2);
                 unset($friendList2[$uid]);
@@ -41,6 +59,24 @@ if(!$sql) {
                 $friendList2 = array_values($friendList2);
                 $jsonOutFriend = json_encode($friendList2);
                 mysql_query("update user set friend='$jsonOutFriend' where uid='$toid'");
+
+                $friendComments2 = json_decode($friendFetch["friend_comments"],true);
+                unset($friendComments2[$uid]);
+                $friendComments2Json = json_encode($friendComments2);
+                $newStr2 = "";
+                for ($i=0; $i<strlen($friendComments2Json); $i++){
+                    $thisChar = $friendComments2Json[$i];
+                    if ($thisChar == "'"){
+                        $thisChar = "\\'";
+                    }elseif ($thisChar == "\\"){
+                        $thisChar = "\\\\";
+                    }
+                    $newStr2 = $newStr2.$thisChar;
+                }
+                mysql_query("update user set friend_comments='$newStr2' where uid='$toid'");
+
+                $err = array('success' => 200);
+                echo json_encode($err);
 
             }
         }

@@ -23,18 +23,18 @@
     					$err = array('error' => $_FILES["file"]["error"]);
 						echo json_encode($err);
     				}else{
-    					if (file_exists("./avatar/" . $_FILES["file"]["name"]))
-      					{
-      						$err = array('error' => 323);
-							echo json_encode($err);
-      					}else{
-      						$filename = $_FILES["file"]["name"];
+//    					if (file_exists("./avatar/" . $_FILES["file"]["name"]))
+//      					{
+//      						$err = array('error' => 323);
+//							echo json_encode($err);
+//      					}else{
+      						$filename = "user".$uid.".jpg";
       						move_uploaded_file($_FILES["file"]["tmp_name"],"./avatar/".$filename);
 
       						mysql_query("update user set avatar='$filename' where uid='$uid'");
       						$err = array('success' => 200);
 							echo json_encode($err);
-      					}
+//      					}
     				}
   				}else{
   					$err = array('error' => 343);
