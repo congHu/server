@@ -44,8 +44,8 @@ if(!$sql) {
                 case "gender":
                     if ($value == "0" || $value == "1"){
                         mysql_query("update user set gender='$value' where uid=$uid");
-                        break;
                     }
+                    break;
                 case "area":
                     mysql_query("update user set area='$value' where uid=$uid");
                     break;
@@ -57,13 +57,13 @@ if(!$sql) {
                     $ymd = explode("-" ,$value);
                     if (count($ymd) == 3){
                         mysql_query("update user set birthday='$value' where uid=$uid");
-                        break;
                     }
+                    break;
                 case "age_privacy":
                     if ($value == "0" || $value == "1" || $value == "2"){
                         mysql_query("update user set age_privacy='$value' where uid=$uid");
-                        break;
                     }
+                    break;
                 default:
                     $err = array('error' => 862);
                     echo json_encode($err);
