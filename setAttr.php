@@ -51,7 +51,7 @@ if(!$sql) {
                     break;
                 case "description":
                     $value = slashStr($value);
-                    mysql_query("update user set area='$value' where uid=$uid");
+                    mysql_query("update user set description='$value' where uid=$uid");
                     break;
                 case "birthday":
                     $ymd = explode("-" ,$value);
