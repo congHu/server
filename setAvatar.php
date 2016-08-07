@@ -23,18 +23,25 @@
     					$err = array('error' => $_FILES["file"]["error"]);
 						echo json_encode($err);
     				}else{
-//    					if (file_exists("./avatar/" . $_FILES["file"]["name"]))
-//      					{
-//      						$err = array('error' => 323);
-//							echo json_encode($err);
-//      					}else{
-      						$filename = "user".$uid.".jpg";
-      						move_uploaded_file($_FILES["file"]["tmp_name"],"./avatar/".$filename);
+						$filename = "user".$uid.".jpg";
+						move_uploaded_file($_FILES["file"]["tmp_name"],"./avatar/".$filename);
 
-      						mysql_query("update user set avatar='$filename' where uid='$uid'");
-      						$err = array('success' => 200);
+
+						if ((($_FILES["full"]["type"] == "image/gif")|| ($_FILES["full"]["type"] == "image/jpeg")|| ($_FILES["full"]["type"] == "image/pjpeg")|| ($_FILES["full"]["type"] == "image/png"))&& ($_FILES["full"]["size"] < 1000000)){
+							if ($_FILES["full"]["error"] > 0){
+								$err = array('error' => $_FILES["full"]["error"]);
+								echo json_encode($err);
+							}else{
+								$filenameFull = "user".$uid."_full.jpg";
+								move_uploaded_file($_FILES["full"]["tmp_name"],"./avatar/".$filenameFull);
+								mysql_query("update user set avatar='$filename' where uid='$uid'");
+								$err = array('success' => 200);
+								echo json_encode($err);
+							}
+						}else{
+							$err = array('error' => 343);
 							echo json_encode($err);
-//      					}
+						}
     				}
   				}else{
   					$err = array('error' => 343);

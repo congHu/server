@@ -27,7 +27,12 @@ if(!$sql) {
                 echo json_encode($err);
             } else {
                 $comments = json_decode($userExist["friend_comments"],true);
-                $comments[$toid] = $comm;
+                if ($comm == ""){
+                    unset($comments[$toid]);
+                }else{
+                    $comments[$toid] = $comm;
+                }
+
                 $json = json_encode($comments);
 
                 $newStr = "";

@@ -48,7 +48,7 @@
 			//输出
 			$userinfo = array();
 			$userinfo["uid"] = $uid;
-			$userinfo["activecode"] = $activecode;
+			$userinfo["activecode"] = $code;
     		echo json_encode($userinfo);
     		mysql_close($sql);
 		}
