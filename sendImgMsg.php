@@ -4,7 +4,7 @@ $acode = $_POST["acode"];
 $toid = $_POST["toid"];
 
 $msgtype = "image";
-$body = $_POST["body"];
+//$body = $_POST["body"];
 $imgPv = $_FILES["img"];
 $imgFull = $_FILES["img_full"];
 
