@@ -11,7 +11,7 @@ if(!$sql) {
     exit(1);
 }else {
     mysql_select_db("notecloud", $sql);
-    $res = mysql_query("select activecode,friend from user where uid='$uid'");
+    $res = mysql_query("select activecode,friend,black_list from user where uid='$uid'");
     $userExist = mysql_fetch_array($res);
     if (!$userExist) {
         $err = array('error' => 101);
@@ -27,9 +27,19 @@ if(!$sql) {
             // 添加的代码: 黑名单检查
             $inBlackList = false;
             if (!empty($blacklistText["black_list"])){
-                $blacklist = json_decode($blacklistText);
+                $blacklist = json_decode($blacklistText["black_list"]);
                 $blacklist = array_flip($blacklist);
                 if (array_key_exists($toid, $blacklist)){
+                    $err = array('error' => 425);
+                    echo json_encode($err);
+                    $inBlackList = true;
+                }
+            }
+
+            if (!empty($userExist["black_list"])){
+                $myBlacklist = json_decode($userExist["black_list"]);
+                $myBlacklist = array_flip($myBlacklist);
+                if (array_key_exists($toid, $myBlacklist)){
                     $err = array('error' => 425);
                     echo json_encode($err);
                     $inBlackList = true;
