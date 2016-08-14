@@ -21,26 +21,44 @@ if(!$sql) {
             $err = array('error' => 174);
             echo json_encode($err);
         } else {
-            $friendlist = json_decode($userExist["friend"]);
-            $friendlist = array_flip($friendlist);
-            if ($friendlist[$toid] != null) {
-                $err = array('error' => 423);
-                echo json_encode($err);
-            } else {
-                $newStr = "";
-                for ($i=0; $i<strlen($msg); $i++){
-                    $thisChar = $msg[$i];
-                    if ($thisChar == "'"){
-                        $thisChar = "\\'";
-                    }elseif ($thisChar == "\\"){
-                        $thisChar = "\\\\";
-                    }
-                    $newStr = $newStr.$thisChar;
+            $blQuery = mysql_query("select black_list from user where uid='$toid'");
+            $blacklistText = mysql_fetch_array($blQuery);
+
+            // 添加的代码: 黑名单检查
+            $inBlackList = false;
+            if (!empty($blacklistText["black_list"])){
+                $blacklist = json_decode($blacklistText);
+                $blacklist = array_flip($blacklist);
+                if (array_key_exists($toid, $blacklist)){
+                    $err = array('error' => 425);
+                    echo json_encode($err);
+                    $inBlackList = true;
                 }
-                mysql_query("insert into chat$toid (send_from,fromid,type,body,time) values ('user','$uid','req','$newStr',now())");
-                $err = array('success' => 200);
-                echo json_encode($err);
             }
+
+            if (!$inBlackList){
+                $friendlist = json_decode($userExist["friend"]);
+                $friendlist = array_flip($friendlist);
+                if ($friendlist[$toid] != null) {
+                    $err = array('error' => 423);
+                    echo json_encode($err);
+                } else {
+                    $newStr = "";
+                    for ($i=0; $i<strlen($msg); $i++){
+                        $thisChar = $msg[$i];
+                        if ($thisChar == "'"){
+                            $thisChar = "\\'";
+                        }elseif ($thisChar == "\\"){
+                            $thisChar = "\\\\";
+                        }
+                        $newStr = $newStr.$thisChar;
+                    }
+                    mysql_query("insert into chat$toid (send_from,fromid,type,body,time) values ('user','$uid','req','$newStr',now())");
+                    $err = array('success' => 200);
+                    echo json_encode($err);
+                }
+            }
+
         }
     }
 }
