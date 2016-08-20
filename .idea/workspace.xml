@@ -2,8 +2,100 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b2413007-53dc-4428-ace1-e8051584d46c" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/captcha_jb51net/font/Elephant.ttf" afterPath="$PROJECT_DIR$/captcha_jb51net/font/Elephant.ttf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.png" afterPath="$PROJECT_DIR$/main.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pinyin/ChineseCharacters.dat" afterPath="$PROJECT_DIR$/pinyin/ChineseCharacters.dat" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/useso-take-over-google.zip" afterPath="$PROJECT_DIR$/useso-take-over-google.zip" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" afterPath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/server.iml" afterPath="$PROJECT_DIR$/.idea/server.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/123.html" afterPath="$PROJECT_DIR$/123.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/activeEmail.php" afterPath="$PROJECT_DIR$/activeEmail.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/addFriend.php" afterPath="$PROJECT_DIR$/addFriend.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basic_mail.php" afterPath="$PROJECT_DIR$/basic_mail.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/captcha_jb51net/ValidateCode.class.php" afterPath="$PROJECT_DIR$/captcha_jb51net/ValidateCode.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/captcha_jb51net/captcha.php" afterPath="$PROJECT_DIR$/captcha_jb51net/captcha.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/captcha_jb51net/sessionValidate.php" afterPath="$PROJECT_DIR$/captcha_jb51net/sessionValidate.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cases/index.html" afterPath="$PROJECT_DIR$/cases/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cases/mainframe.css" afterPath="$PROJECT_DIR$/cases/mainframe.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/charTest.php" afterPath="$PROJECT_DIR$/charTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/deleteFriend.php" afterPath="$PROJECT_DIR$/deleteFriend.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fetchMsg.php" afterPath="$PROJECT_DIR$/fetchMsg.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/finishedGetImg.php" afterPath="$PROJECT_DIR$/finishedGetImg.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forgot.html" afterPath="$PROJECT_DIR$/forgot.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forgot.js" afterPath="$PROJECT_DIR$/forgot.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forgot.php" afterPath="$PROJECT_DIR$/forgot.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forgot2.php" afterPath="$PROJECT_DIR$/forgot2.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forgot3.php" afterPath="$PROJECT_DIR$/forgot3.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/getAvatar.php" afterPath="$PROJECT_DIR$/getAvatar.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/getAvatarFull.php" afterPath="$PROJECT_DIR$/getAvatarFull.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/getBGImg.php" afterPath="$PROJECT_DIR$/getBGImg.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/getBlackList.php" afterPath="$PROJECT_DIR$/getBlackList.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/getChatImg.php" afterPath="$PROJECT_DIR$/getChatImg.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/getFriendComments.php" afterPath="$PROJECT_DIR$/getFriendComments.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/getFriendList.php" afterPath="$PROJECT_DIR$/getFriendList.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/getPrivateInfo.php" afterPath="$PROJECT_DIR$/getPrivateInfo.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/getUserInfo.php" afterPath="$PROJECT_DIR$/getUserInfo.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hjyCode.php" afterPath="$PROJECT_DIR$/hjyCode.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/isBlackList.php" afterPath="$PROJECT_DIR$/isBlackList.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/isFriend.php" afterPath="$PROJECT_DIR$/isFriend.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/isRequireValidCode.php" afterPath="$PROJECT_DIR$/isRequireValidCode.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jsonAry.php" afterPath="$PROJECT_DIR$/jsonAry.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/login.css" afterPath="$PROJECT_DIR$/login.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/login.html" afterPath="$PROJECT_DIR$/login.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/login.js" afterPath="$PROJECT_DIR$/login.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/login.php" afterPath="$PROJECT_DIR$/login.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mail.class.php" afterPath="$PROJECT_DIR$/mail.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mail.php" afterPath="$PROJECT_DIR$/mail.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pinyin/ChinesePinyin.class.php" afterPath="$PROJECT_DIR$/pinyin/ChinesePinyin.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pinyin/demo.php" afterPath="$PROJECT_DIR$/pinyin/demo.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pinyin/pinyinConvert.php" afterPath="$PROJECT_DIR$/pinyin/pinyinConvert.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/queryTest.php" afterPath="$PROJECT_DIR$/queryTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/random/create.php" afterPath="$PROJECT_DIR$/random/create.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/random/create2.php" afterPath="$PROJECT_DIR$/random/create2.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/random/index.php" afterPath="$PROJECT_DIR$/random/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/reg.js" afterPath="$PROJECT_DIR$/reg.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/register.html" afterPath="$PROJECT_DIR$/register.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/register.php" afterPath="$PROJECT_DIR$/register.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/removeBlackList.php" afterPath="$PROJECT_DIR$/removeBlackList.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resendActiveEmail.php" afterPath="$PROJECT_DIR$/resendActiveEmail.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/saemail.php" afterPath="$PROJECT_DIR$/saemail.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/searchFriend.php" afterPath="$PROJECT_DIR$/searchFriend.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sendFriendReq.php" afterPath="$PROJECT_DIR$/sendFriendReq.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sendImgMsg.php" afterPath="$PROJECT_DIR$/sendImgMsg.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sendMsg.php" afterPath="$PROJECT_DIR$/sendMsg.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/session.php" afterPath="$PROJECT_DIR$/session.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/session_mod.php" afterPath="$PROJECT_DIR$/session_mod.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/session_unvalid_test.php" afterPath="$PROJECT_DIR$/session_unvalid_test.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/session_unvalid_test_1.php" afterPath="$PROJECT_DIR$/session_unvalid_test_1.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/setAttr.php" afterPath="$PROJECT_DIR$/setAttr.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/setAvatar.php" afterPath="$PROJECT_DIR$/setAvatar.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/setBGImg.php" afterPath="$PROJECT_DIR$/setBGImg.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/setBlackList.php" afterPath="$PROJECT_DIR$/setBlackList.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/setFriendComment.php" afterPath="$PROJECT_DIR$/setFriendComment.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/showfiles.php" afterPath="$PROJECT_DIR$/showfiles.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sql.php" afterPath="$PROJECT_DIR$/sql.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test.php" afterPath="$PROJECT_DIR$/test.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test2.php" afterPath="$PROJECT_DIR$/test2.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tomcat7php.txt" afterPath="$PROJECT_DIR$/tomcat7php.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/trail/.idea/copyright/profiles_settings.xml" afterPath="$PROJECT_DIR$/trail/.idea/copyright/profiles_settings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/trail/.idea/misc.xml" afterPath="$PROJECT_DIR$/trail/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/trail/.idea/modules.xml" afterPath="$PROJECT_DIR$/trail/.idea/modules.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/trail/.idea/php.xml" afterPath="$PROJECT_DIR$/trail/.idea/php.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/trail/.idea/trail.iml" afterPath="$PROJECT_DIR$/trail/.idea/trail.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/trail/.idea/workspace.xml" afterPath="$PROJECT_DIR$/trail/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/trail/index.php" afterPath="$PROJECT_DIR$/trail/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/upload.html" afterPath="$PROJECT_DIR$/upload.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/upload_file.php" afterPath="$PROJECT_DIR$/upload_file.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/verify.php" afterPath="$PROJECT_DIR$/verify.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/verify2.php" afterPath="$PROJECT_DIR$/verify2.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/video.html" afterPath="$PROJECT_DIR$/video.html" />
     </list>
     <ignored path="server.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -15,7 +107,6 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
   </component>
@@ -140,8 +231,8 @@
       <file leaf-file-name="sendFriendReq.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/sendFriendReq.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2">
-              <caret line="32" column="49" selection-start-line="32" selection-start-column="49" selection-end-line="32" selection-end-column="49" />
+            <state relative-caret-position="945">
+              <caret line="63" column="52" selection-start-line="63" selection-start-column="52" selection-end-line="63" selection-end-column="52" />
               <folding>
                 <marker date="1471238176000" expanded="true" signature="305:367" ph="select activ... user" />
                 <marker date="1471238176000" expanded="true" signature="700:745" ph="select activ... user" />
@@ -236,7 +327,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -285,13 +376,14 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -370,15 +462,16 @@
       <workItem from="1471181731684" duration="156000" />
       <workItem from="1471188970709" duration="1747000" />
       <workItem from="1471237971696" duration="365000" />
+      <workItem from="1471441999344" duration="92000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="69398000" />
+    <option name="totallyTimeSpent" value="69490000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="824" extended-state="6" />
-    <editor active="false" />
+    <frame x="0" y="23" width="1440" height="824" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -586,17 +679,17 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="17" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="17" />
+        </state>
+      </provider>
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="551">
             <caret line="353" column="15" selection-start-line="353" selection-start-column="15" selection-end-line="353" selection-end-column="15" />
           </first_editor>
           <second_editor />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="17" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="17" />
         </state>
       </provider>
     </entry>
@@ -808,8 +901,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/sendFriendReq.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2">
-          <caret line="32" column="49" selection-start-line="32" selection-start-column="49" selection-end-line="32" selection-end-column="49" />
+        <state relative-caret-position="945">
+          <caret line="63" column="52" selection-start-line="63" selection-start-column="52" selection-end-line="63" selection-end-column="52" />
           <folding>
             <marker date="1471238176000" expanded="true" signature="305:367" ph="select activ... user" />
             <marker date="1471238176000" expanded="true" signature="700:745" ph="select activ... user" />
