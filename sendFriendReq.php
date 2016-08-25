@@ -27,9 +27,9 @@ if(!$sql) {
             // 添加的代码: 黑名单检查
             $inBlackList = false;
             if (!empty($blacklistText["black_list"])){
-                $blacklist = json_decode($blacklistText["black_list"]);
+                $blacklist = json_decode($blacklistText["black_list"],true);
                 $blacklist = array_flip($blacklist);
-                if (array_key_exists($toid, $blacklist)){
+                if (array_key_exists($uid, $blacklist)){
                     $err = array('error' => 425);
                     echo json_encode($err);
                     $inBlackList = true;
@@ -37,7 +37,7 @@ if(!$sql) {
             }
 
             if (!empty($userExist["black_list"])){
-                $myBlacklist = json_decode($userExist["black_list"]);
+                $myBlacklist = json_decode($userExist["black_list"],true);
                 $myBlacklist = array_flip($myBlacklist);
                 if (array_key_exists($toid, $myBlacklist)){
                     $err = array('error' => 425);

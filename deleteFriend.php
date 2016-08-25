@@ -26,6 +26,7 @@ if(!$sql) {
                 $err = array('error' => 423);
                 echo json_encode($err);
             } else {
+                // 操作好友列表
                 unset($friendlist[$toid]);
                 $friendlist = array_flip($friendlist);
                 $friendlist = array_values($friendlist);
@@ -36,6 +37,8 @@ if(!$sql) {
                 unset($friendComments[$toid]);
                 $friendCommentsJson = json_encode($friendComments);
 
+                // 操作备注列表
+                // TODO: 出问题了
                 $newStr = "";
                 for ($i=0; $i<strlen($friendCommentsJson); $i++){
                     $thisChar = $friendCommentsJson[$i];
@@ -48,7 +51,7 @@ if(!$sql) {
                 }
                 mysql_query("update user set friend_comments='$newStr' where uid='$uid'");
 
-
+                // 操作对方的好友列表
                 $resF = mysql_query("select friend from user where uid='$toid'");
                 $friendFetch = mysql_fetch_array($resF);
 
@@ -60,6 +63,8 @@ if(!$sql) {
                 $jsonOutFriend = json_encode($friendList2);
                 mysql_query("update user set friend='$jsonOutFriend' where uid='$toid'");
 
+                // 操作对方的备注列表
+                // TODO: 出问题了
                 $friendComments2 = json_decode($friendFetch["friend_comments"],true);
                 unset($friendComments2[$uid]);
                 $friendComments2Json = json_encode($friendComments2);
